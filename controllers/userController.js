@@ -15,7 +15,7 @@ module.exports = {
   },
   // Get a single User
   getSingleUser(req, res) {
-    User.findOne({ _id: req.params._id })
+    User.findOne({ _id: req.params.id })
       .then(async (user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
